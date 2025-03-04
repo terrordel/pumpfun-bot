@@ -1,0 +1,75 @@
+modules {
+  module {
+    name = "moab"
+    language = "python"
+
+    # If you change this entry make sure you put it under name_match section
+    param metric_prefix {
+      value = "moab"
+    }
+
+    # Logging
+    param loglevel {
+      value = "INFO"
+    }
+    # The logfile parameter can be either a file name or "SYSLOG"
+    #param logfile {
+    #  value = "SYSLOG"
+    #}
+    param logfacility {
+      value = "user"
+    }
+    param logdevice {
+      value = "/dev/log"
+    }
+
+    # Location of mdiag binary
+    param mdiag_bin {
+      value = "/opt/moab/bin/mdiag"
+    }
+
+    # location of Moab config files
+    param moab_home_dir {
+      value = "/var/spool/moab"
+    }
+
+    # Moab server host
+    #param moab_server {
+    #  value = "moabsrv.mydomain.org"
+    #}
+
+    # Moab server port
+    #param moab_port {
+    #  value = 42559
+    #}
+
+    # Whether to query GRESes
+    # if this is true, make sure mdiag_bin is set
+    # and the gmond user is authorized to run
+    # mdiag -n GLOBAL
+    param query_gres {
+      value = False
+    }
+
+    # Location of showq binary
+    param showq_bin {
+      value = "/opt/moab/bin/showq"
+    }
+    
+    # timeout on Moab client commands
+    param timeout {
+      value = 15
+    }
+  }
+}
+
+collection_group {
+  collect_every = 60
+  time_threshold = 90
+
+  metric {
+      name_match = "moab_(.+)"
+      value_threshold = 1.0
+  }
+
+}
