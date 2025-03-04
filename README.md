@@ -216,3 +216,9 @@ The bot has a UI which runs in the terminal, this allows you to run the bot on r
 
 #### version 1.3.1 
 - Refactoring/performance improvements
+- 
+
+## DISCLAIMER
+
+> [!IMPORTANT]
+> Use at your own risk. Loss of funds is the sole responsibility of the user.
