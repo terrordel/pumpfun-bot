@@ -99,11 +99,11 @@ You can modify token info as follow:
 - Delete
 
 
-# MY OTHER PROJECT FOR SALE: Multichainsniper
+# MY OTHER PROJECT: Multichainsniper
 Multi chain and multi wallet sniper that works on a variety of decentralized exchanges as well. Optimized methods are used in order to make this one of the fastest, if not the fastest sniper on the market
 
 ## Contact
-Sales have reopened. Message me on telegram if you are interested
+Message me on telegram for more info
 - [Telegram](https://t.me/nonlinearlogic)
 
 
