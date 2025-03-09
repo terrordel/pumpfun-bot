@@ -6,4 +6,4 @@ RED = Fore.RED
 YELLOW = Fore.YELLOW
 BLUE = Fore.BLUE
 PURPLE = Fore.MAGENTA
-CYAN = Fore.CYAN
+CYAN = Fore.CYAN 
