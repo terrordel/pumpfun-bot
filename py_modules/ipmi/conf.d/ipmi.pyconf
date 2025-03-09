@@ -1,0 +1,64 @@
+modules {
+  module {
+    name = "ipmi"
+    language = "python"
+
+    # If you change this entry make sure you put it under name_match section
+    param metric_prefix {
+      value = "ipmi"
+    }
+
+    # use sudo
+    param use_sudo {
+      value = False
+    }
+
+    # IP of the IPMI (optional)
+    #param ipmi_ip {
+    #  value = "10.1.2.3"
+    #}
+    
+    # IPMI username (optional)
+    #param username {
+    #  value = "admin"
+    #}
+    
+    # IPMI password (optional)
+    #param password {
+    #  value = "secret"
+    #}
+
+    # IPMI auth level (optional)
+    #param level {
+    #  value = "USER"
+    #}
+
+    # timeout on ipmitool command
+    param timeout {
+      value = 15
+    }
+
+    # Location of timeout binary
+    param timeout_bin {
+      value = "/usr/bin/timeout"
+    }
+    
+    # Location of ipmitool binary
+    param ipmitool_bin {
+      value = "/usr/bin/ipmitool"
+    }
+    
+  }
+
+}
+
+collection_group {
+  collect_every = 60
+  time_threshold = 90
+
+  metric {
+      name_match = "ipmi_(.+)"
+      value_threshold = 1.0
+  }
+
+}

@@ -1,0 +1,12 @@
+InquirerPy
+pyfiglet
+pandas
+tabulate
+yaspin
+dexscreener
+colorama
+solders
+solana
+base58
+httpx
+cachetools
