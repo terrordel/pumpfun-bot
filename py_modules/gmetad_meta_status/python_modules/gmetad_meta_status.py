@@ -460,4 +460,4 @@ def main(argv):
         metric_cleanup()
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(sys.argv[1:]) 
